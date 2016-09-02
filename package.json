@@ -1,0 +1,19 @@
+{
+  "name": "choo-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node budo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "choo": "^3.2.2"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "budo": "^9.0.0"
+  }
+}
