@@ -1,7 +1,24 @@
-import choo from 'choo'
-import html from 'choo/html'
+'use strict';
 
-import loginView from 'views/LoginView'
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var choo = _interopDefault(require('choo'));
+var html = _interopDefault(require('choo/html'));
+
+var Button = (label, onClick) => {
+  return html`
+    <button onclick=${onClick}>${label}</button>
+  `
+}
+
+var loginView = (state, prev, send) => {
+  return html`
+    <main>
+      <h1>Login</h1>
+      ${Button('Login', () => send('login'))}
+    </main>
+  `
+}
 
 const app = choo()
 

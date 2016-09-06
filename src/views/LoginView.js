@@ -1,16 +1,12 @@
-const html = require('choo/html')
+import html from 'choo/html'
 
-const loginView = (state, prev, send) => {
-  const login = () => {
-    send('login')
-  }
+import Button from 'elements/Button'
 
+export default (state, prev, send) => {
   return html`
     <main>
       <h1>Login</h1>
-      <button onclick=${login}>Login</button>
+      ${Button('Login', () => send('login'))}
     </main>
   `
 }
-
-module.exports = loginView;
